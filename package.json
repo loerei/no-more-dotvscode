@@ -1,0 +1,50 @@
+{
+    "name": "no-more-vscode",
+    "displayName": "No More .vscode (Clean Workspace & Binary Isolator)",
+    "description": "Keep your workspace 100% clean. Redirects compiled binaries & build artifacts away from project folders.",
+    "version": "0.1.0",
+    "publisher": "loerei",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "keywords": [
+        "clean workspace",
+        "no-vscode",
+        "binary isolator",
+        "clean build",
+        "zero clutter"
+    ],
+    "icon": "icon.png",
+    "galleryBanner": {
+        "color": "#1a1a1a",
+        "theme": "dark"
+    },
+    "homepage": "https://github.com/loerei/no-more-vscode#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/loerei/no-more-vscode.git"
+    },
+    "bugs": {
+        "url": "https://github.com/loerei/no-more-vscode/issues"
+    },
+    "contributes": {
+        "configuration": {
+            "title": "No More .vscode",
+            "properties": {
+                "no-more-vscode.buildDirectory": {
+                    "type": "string",
+                    "default": "C:\\VscodeBuilds",
+                    "description": "Global directory where all compiled executables and build artifacts are stored."
+                },
+                "no-more-vscode.autoCleanLocalExes": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Automatically remove local executables sitting beside source code files."
+                }
+            }
+        }
+    }
+}
