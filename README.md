@@ -1,5 +1,6 @@
 # 🧹 No More .vscode (Clean Workspace & Binary Isolator)
 
+> 🎓 **Built specifically for CS Learners, Students, & Educators.**
 > **Say goodbye to `.vscode` folder clutter and stray `.exe` files in your project directory.**
 
 ![VS Code Marketplace Version](https://img.shields.io/badge/VS%20Code%20Marketplace-v0.1.0-blue)
@@ -26,6 +27,8 @@ When learning C, C++, Rust, Go, or Java, VS Code often litters your project dire
 ---
 
 ## 📦 Part of the F5 Anything Suite
+
+This extension is part of the **F5 Anything Suite**, designed to make VS Code friction-free for Computer Science learners:
 
 - **[F5 Anything](https://github.com/loerei/f5-anything)**: Press F5 to build & run any code file instantly.
 - **[Easy Binary](https://github.com/loerei/easy-binary)**: Auto-install missing compilers (GCC, Python, JDK, Go) via Winget.
