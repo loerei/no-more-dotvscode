@@ -1,5 +1,5 @@
 {
-    "name": "no-more-vscode",
+    "name": "no-more-dotvscode",
     "displayName": "No More .vscode (Clean Workspace & Binary Isolator)",
     "description": "Keep your workspace 100% clean. Redirects compiled binaries & build artifacts away from project folders.",
     "version": "0.1.0",
@@ -12,7 +12,7 @@
     ],
     "keywords": [
         "clean workspace",
-        "no-vscode",
+        "no-dotvscode",
         "binary isolator",
         "clean build",
         "zero clutter"
@@ -22,24 +22,24 @@
         "color": "#1a1a1a",
         "theme": "dark"
     },
-    "homepage": "https://github.com/loerei/no-more-vscode#readme",
+    "homepage": "https://github.com/loerei/no-more-dotvscode#readme",
     "repository": {
         "type": "git",
-        "url": "https://github.com/loerei/no-more-vscode.git"
+        "url": "https://github.com/loerei/no-more-dotvscode.git"
     },
     "bugs": {
-        "url": "https://github.com/loerei/no-more-vscode/issues"
+        "url": "https://github.com/loerei/no-more-dotvscode/issues"
     },
     "contributes": {
         "configuration": {
             "title": "No More .vscode",
             "properties": {
-                "no-more-vscode.buildDirectory": {
+                "no-more-dotvscode.buildDirectory": {
                     "type": "string",
                     "default": "C:\\VscodeBuilds",
                     "description": "Global directory where all compiled executables and build artifacts are stored."
                 },
-                "no-more-vscode.autoCleanLocalExes": {
+                "no-more-dotvscode.autoCleanLocalExes": {
                     "type": "boolean",
                     "default": true,
                     "description": "Automatically remove local executables sitting beside source code files."
