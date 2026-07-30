@@ -1,6 +1,6 @@
 # 🧹 No More .vscode (Clean Workspace & Binary Isolator)
 
-> 🎓 **Built specifically for CS Learners, Students, & Educators.**
+> 🎓 **Built for CS Learners, Students, & Educators.**
 > **Say goodbye to `.vscode` folder clutter and stray `.exe` files in your project directory.**
 
 ![VS Code Marketplace Version](https://img.shields.io/badge/VS%20Code%20Marketplace-v0.1.0-blue)
