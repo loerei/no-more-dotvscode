@@ -1,10 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
   <defs>
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#18181b" />
-      <stop offset="100%" stop-color="#09090b" />
-    </linearGradient>
-    <linearGradient id="cleanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="folderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#34d399" />
       <stop offset="100%" stop-color="#059669" />
     </linearGradient>
@@ -14,17 +10,17 @@
     </filter>
   </defs>
 
-  <!-- Base Background -->
-  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#bgGrad)" stroke="#27272a" stroke-width="3" />
+  <!-- Folder Body - Ghost Fading Effect -->
+  <path d="M18 36C18 31.5817 21.5817 28 26 28H48L58 38H102C106.418 38 110 41.5817 110 46V92C110 96.4183 106.418 100 102 100H26C21.5817 100 18 96.4183 18 92V36Z" fill="url(#folderGrad)" opacity="0.25" stroke="url(#folderGrad)" stroke-width="2.5" stroke-dasharray="6 4" />
 
-  <!-- Shield Shape -->
-  <path d="M64 24L94 36V62C94 82 79 98 64 104C49 98 34 82 34 62V36L64 24Z" fill="none" stroke="url(#cleanGrad)" stroke-width="4" stroke-linejoin="round" opacity="0.4" />
-  
-  <!-- Folder Icon -->
-  <path d="M38 48C38 45.7909 39.7909 44 42 44H54L60 50H86C88.2091 50 90 51.7909 90 54V78C90 80.2091 88.2091 82 86 82H42C39.7909 82 38 80.2091 38 78V48Z" fill="#27272a" stroke="url(#cleanGrad)" stroke-width="3" />
+  <!-- Ghost Inner .vscode Label -->
+  <text x="64" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, monospace" font-weight="800" font-size="20" fill="#34d399" opacity="0.6" text-anchor="middle">.vscode</text>
 
-  <!-- Clean Sparkles -->
-  <path d="M64 34L67 42L75 45L67 48L64 56L61 48L53 45L61 42L64 34Z" fill="url(#cleanGrad)" filter="url(#glow)" />
-  <circle cx="82" cy="38" r="3" fill="#34d399" />
-  <circle cx="44" cy="72" r="2" fill="#34d399" />
+  <!-- Clean Sparkle Eraser Effect -->
+  <path d="M88 28L92 40L104 44L92 48L88 60L84 48L72 44L84 40L88 28Z" fill="url(#folderGrad)" filter="url(#glow)" />
+  <circle cx="34" cy="80" r="4" fill="#34d399" opacity="0.8" />
+  <circle cx="98" cy="82" r="3" fill="#34d399" opacity="0.8" />
+
+  <!-- Diagonal Disappearing Cut Line -->
+  <line x1="24" y1="96" x2="104" y2="32" stroke="#34d399" stroke-width="4" stroke-linecap="round" filter="url(#glow)" opacity="0.9" />
 </svg>
