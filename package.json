@@ -2,8 +2,14 @@
     "name": "clean-workspace",
     "displayName": "Clean Workspace (No More .vscode)",
     "description": "Keep your workspace 100% clean. Redirects compiled binaries & build artifacts away from project folders.",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "publisher": "loerei",
+    "main": "./extension.js",
+    "activationEvents": [
+        "onCommand:clean-workspace.excludeCurrentFolder",
+        "onCommand:clean-workspace.includeCurrentFolder",
+        "onCommand:clean-workspace.toggleMode"
+    ],
     "engines": {
         "vscode": "^1.80.0"
     },
@@ -16,7 +22,7 @@
         "binary isolator",
         "clean build",
         "workspace hygiene",
-        "build directory"
+        "exclude mode"
     ],
     "icon": "icon.png",
     "galleryBanner": {
@@ -32,18 +38,52 @@
         "url": "https://github.com/loerei/no-more-dotvscode/issues"
     },
     "contributes": {
+        "commands": [
+            {
+                "command": "clean-workspace.excludeCurrentFolder",
+                "title": "Clean Workspace: Exclude Current Folder"
+            },
+            {
+                "command": "clean-workspace.includeCurrentFolder",
+                "title": "Clean Workspace: Include Current Folder"
+            },
+            {
+                "command": "clean-workspace.toggleMode",
+                "title": "Clean Workspace: Toggle Mode (Exclude / Include)"
+            }
+        ],
         "configuration": {
             "title": "Clean Workspace",
             "properties": {
+                "clean-workspace.mode": {
+                    "type": "string",
+                    "enum": [
+                        "exclude",
+                        "include"
+                    ],
+                    "default": "exclude",
+                    "description": "Select mode: 'exclude' cleans all folders except listed ones; 'include' cleans ONLY listed folders."
+                },
+                "clean-workspace.excludedFolders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [],
+                    "description": "List of folder paths to exclude from auto-cleaning."
+                },
+                "clean-workspace.includedFolders": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "default": [],
+                    "description": "List of folder paths to include for auto-cleaning."
+                },
                 "clean-workspace.buildDirectory": {
                     "type": "string",
                     "default": "C:\\VscodeBuilds",
                     "description": "Global directory where all compiled executables and build artifacts are stored."
-                },
-                "clean-workspace.autoCleanLocalExes": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Automatically remove local executables sitting beside source code files."
                 }
             }
         }
