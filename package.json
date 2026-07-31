@@ -2,7 +2,7 @@
     "name": "clean-workspace",
     "displayName": "Clean Workspace (No More .vscode)",
     "description": "Keep your workspace 100% clean. Redirects compiled binaries & build artifacts away from project folders.",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "publisher": "loerei",
     "main": "./extension.js",
     "activationEvents": [
@@ -84,6 +84,43 @@
                     "type": "string",
                     "default": "C:\\VscodeBuilds",
                     "description": "Global directory where all compiled executables and build artifacts are stored."
+                },
+                "code-runner.runInTerminal": {
+                    "type": "boolean",
+                    "default": true,
+                    "scope": "resource"
+                },
+                "code-runner.saveFileBeforeRun": {
+                    "type": "boolean",
+                    "default": true,
+                    "scope": "resource"
+                },
+                "code-runner.clearPreviousOutput": {
+                    "type": "boolean",
+                    "default": true,
+                    "scope": "resource"
+                },
+                "code-runner.executorMap": {
+                    "type": "object",
+                    "default": {
+                        "c": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" c",
+                        "cpp": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" cpp",
+                        "python": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" python",
+                        "java": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" java",
+                        "go": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" go",
+                        "javascript": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" javascript",
+                        "typescript": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" typescript",
+                        "csharp": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" csharp",
+                        "rust": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" rust",
+                        "html": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" html",
+                        "shellscript": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" shellscript",
+                        "bat": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" bat",
+                        "cmd": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" cmd",
+                        "powershell": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" ps1",
+                        "ps1": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" ps1",
+                        "exe": "powershell -NoProfile -ExecutionPolicy Bypass -File C:\\VscodeBuilds\\run_code.ps1 \"$filePath\" exe"
+                    },
+                    "scope": "resource"
                 }
             }
         }
