@@ -2,7 +2,7 @@
     "name": "clean-workspace",
     "displayName": "Clean Workspace (No More .vscode)",
     "description": "Keep your workspace 100% clean. Redirects compiled binaries & build artifacts away from project folders.",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "publisher": "loerei",
     "main": "./extension.js",
     "activationEvents": [
